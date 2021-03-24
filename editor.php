@@ -1321,7 +1321,7 @@ $(document).ready(function(){
   $(".change-editor-btn").click(function(){
     $(".loading-iframe").show();
     var newUrl = $("#change-editor-url").val();
-    var newEditorUrl = "/new-page-to-edit.php?baseUrl="+newUrl+"&url="+newUrl
+    var newEditorUrl = "/iframe-internal.php?baseUrl="+newUrl+"&url="+newUrl
     $("#page-iframe").attr("src", newEditorUrl);
     $(".change-page-wrap").hide()
     animationScriptAdded = false;
@@ -2031,7 +2031,7 @@ if(url.length > 0){
   
   var newHtml = "";
 
-  var pageIframe = $('<iframe id="page-iframe" style="" src="/new-page-to-edit.php?baseUrl='+baseUrl+'&url=<?php echo $url; ?>"></iframe>').appendTo(".page-iframe-wrapper");
+  var pageIframe = $('<iframe id="page-iframe" style="" src="/iframe-internal.php?baseUrl='+baseUrl+'&url=<?php echo $url; ?>"></iframe>').appendTo(".page-iframe-wrapper");
      
   pageIframe.on('load', function(){
 
